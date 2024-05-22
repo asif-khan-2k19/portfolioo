@@ -93,16 +93,22 @@
     margin-top: 350px;
   }
 
+  .footer{
+    flex-direction: column-reverse;
+    margin-top: 200px;
+    gap: 10px;
+
+  }
   .footer .right {
-    font-size: 13px;
+    font-size: 15px;
   }
   
   .footer .left{
-    margin-top: -2px;
+    /* margin-top: -2px; */
     font-size: 15px;
   }
 
-  .footer-name {
+  /* .footer .left {
     display: none;
-  }
+  } */
 }

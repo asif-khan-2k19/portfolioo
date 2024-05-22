@@ -1,47 +1,3 @@
-var circle = document.querySelector(".circle");
-
-// Locomotive smooth scrolling
-const scroll = new LocomotiveScroll({
-  el: document.querySelector(".main"),
-  smooth: true,
-});
-
-// Circle squeeze
-function circleSize() {
-  var xscale = 1;
-  var yscale = 1;
-
-  var xprev = 0;
-  var yprev = 0;
-
-  window.addEventListener("mousemove", function (dets) {
-    clearTimeout(timeout);
-
-    xscale = gsap.utils.clamp(0.5, 1.2, dets.clientX - xprev);
-    yscale = gsap.utils.clamp(0.5, 1.2, (ydiff = dets.clientY - yprev));
-
-    xprev = dets.clientX;
-    yprev = dets.clientY;
-
-    circleMouseFollower(xscale, yscale);
-
-    var timeout = setTimeout(() => {
-      circle.style.transform = `translate(${dets.clientX}px,${dets.clientY}px) scale(1,1)`;
-    }, 100);
-  });
-}
-circleSize();
-
-// Circle move
-function circleMouseFollower(xscale, yscale, disabled) {
-  if (disabled == true) {
-    window.addEventListener("mousemove", function (dets) {
-      circle.style.transform = `translate(${dets.clientX}px,${dets.clientY}px) scale(${xscale}, ${yscale})`;
-    });
-  }
-}
-circleMouseFollower();
-
 document.querySelectorAll(".elem").forEach(function(elem) {
   var rotate = 0;
   var diffrot = 0;
@@ -85,8 +41,6 @@ document.querySelectorAll(".elem").forEach(function(elem) {
     });
   });
 });
-
-
 
 // Link Animation
 document.querySelectorAll('h4').forEach(function(a){
@@ -154,3 +108,22 @@ function gsapAnimations() {
 }
 
 gsapAnimations();
+
+// Clock Time
+function updateTime() {
+  const now = new Date();
+  let hours = now.getHours();
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+
+  hours = hours % 12;
+  hours = hours ? hours : 12; 
+  const hoursStr = String(hours).padStart(2, '0');
+
+  const currentTime = `${hoursStr}:${minutes} ${ampm}`;
+  
+  document.querySelector('#time').innerHTML = currentTime + " IST";
+}
+
+updateTime();
+setInterval(updateTime, 10000);
