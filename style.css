@@ -1,0 +1,296 @@
+@font-face {
+  font-family: "General Sans";
+  src: url(fonts/GeneralSans-Regular.otf);
+}
+
+@font-face {
+  font-family: "General Sans Medium";
+  src: url(fonts/GeneralSans-Medium.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: "General Sans";
+}
+
+::selection{
+  background-color: #fff;
+  color: #000;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #000;
+}
+
+.main{
+  width: 100%;
+  position: relative;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 99999;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  mix-blend-mode: difference;
+}
+
+.nav {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "General Sans Medium";
+  font-weight: 900;
+  background-color: #000;
+  z-index: 99;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+}
+
+.hero .top {
+  width: 63vw;
+  margin-top: 100px;
+  margin-left: 50px;
+  text-align: right;
+}
+.hero .top .hiding-element {
+  width: 63vw;
+  overflow: hidden;
+}
+.hero .top h1 {
+  font-size: 10vw;
+  line-height: 0.9;
+  letter-spacing: 6px;
+  opacity: 0.6;
+  transform: translateY(150%);
+  text-align: left;
+  z-index: 999;
+}
+
+.hero .top .designer {
+  margin-left: 11vw;
+}
+
+.hero .top h4 {
+  margin-right: 11vw;
+  margin-top: 20px;
+  font-size: 1vw;
+  letter-spacing: 1px;
+  text-align: right;
+  transform: translateY(-200%);
+}
+
+h4{
+  overflow: hidden;
+}
+
+.hero .bottom {
+  position: absolute;
+  bottom: 10px;
+  padding: 0px 40px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.underline{
+  position: relative;
+  left: -100%;
+  bottom: 12px;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.hero .bottom .end {
+  text-align: right;
+  line-height: 2;
+  position: relative;
+}
+
+.hero .bottom .end span {
+  margin-top: 4px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.hero .bottom .end span svg {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-105%, -130%);
+}
+
+a{
+  z-index: 99999;
+}
+
+a svg{
+  position: relative;
+  top: 3px;
+  transform: rotate(10deg);
+}
+
+.second {
+  position: relative;
+  margin-top: 200px;
+  margin-left: 50px;
+  width: 86%;
+}
+
+.second .elem {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #888;
+  padding: 3.2vw 0vw;
+  cursor: pointer;
+}
+
+.second .elem:last-child {
+  border-bottom: 2px solid #888;
+}
+
+.second .elem h1 {
+  font-size: 7.05vw;
+  letter-spacing: 6px;
+  opacity: 0.7;
+}
+
+.second .elem img {
+  opacity: 0;
+  position: absolute;
+  height: 140%;
+  z-index: 999;
+}
+
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  left: 0px;
+  top: 40px;
+  width: 100%;
+  height: 90vh;
+
+}
+
+.about .left {
+  width: calc(100% - 46%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.about .left img {
+  height: 15vw;
+  margin-top: -50px;
+  border-radius: 50%;
+  filter: grayscale(1) brightness(1.1) contrast(1.2);
+}
+
+.about .right {
+  width: 41%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.about .right h3 {
+  width: 78%;
+  font-size: 1.2vw;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.forgot .mention ,
+.about .right h4{
+  font-size: 0.9vw;
+  opacity: 0.7;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.about .right .talk {
+  padding: 5px 20px;
+  font-weight: 100;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  margin-top: 20px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.about .right .talk:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid black;
+}
+
+.forgot {
+  position: relative;
+  top: 50px;
+  padding-left: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.forgot .follow {
+  width: 240px;
+}
+
+.footer .left {
+  display: flex;
+  gap: 2vw;
+}
+
+.footer .right {
+  font-weight: 900;
+  font-size: 16px;
+  display: flex;
+  gap: 3vw;
+}
+
+.footer{
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  padding: 20px 40px;
+}
