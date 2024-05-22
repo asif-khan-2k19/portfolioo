@@ -80,9 +80,6 @@
     font-size: 16px;
   }
 
-  /* .about .right .talk{
-    border:1.5px solid #fff
-  } */
   .forgot .mention,
   .about .right h4 {
     font-size: 14px;
@@ -93,12 +90,16 @@
 
   .forgot {
     position: relative;
-    margin-top: 160px;
-    /* background-color: red; */
+    margin-top: 350px;
   }
 
   .footer .right {
-    font-size: 16px;
+    font-size: 13px;
+  }
+  
+  .footer .left{
+    margin-top: -2px;
+    font-size: 15px;
   }
 
   .footer-name {
