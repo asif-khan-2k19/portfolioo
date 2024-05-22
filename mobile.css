@@ -22,6 +22,10 @@
     letter-spacing: 1px;
   }
 
+  .hero .top .hiding-element {
+    width: 65vw;
+  }
+
   .hero .bottom {
     text-align: left;
     align-items: flex-end;
